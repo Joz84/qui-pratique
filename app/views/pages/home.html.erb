@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+
+<% @sections.each do |section| %>
+  <h1><%= section.title %></h1>
+  <h2><%= section.content %></h2>
+  <%= link_to "lien vers ma section", section %>
+<% end %>

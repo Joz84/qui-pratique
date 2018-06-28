@@ -1,0 +1,7 @@
+<%= @section.title %> -
+<%= current_user.ratings.find_by(section: @section).value %>
+
+<%= simple_form_for [@section, @rating] do |f| %>
+  <%= f.input :value, collection: (1..5) %>
+  <%= f.button :submit %>
+<% end %>
